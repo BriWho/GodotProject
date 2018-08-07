@@ -1,0 +1,105 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Object.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Opponent.gd" type="Script" id=2]
+
+[node name="Opponent" instance=ExtResource( 1 )]
+
+position = Vector2( 300, 300 )
+collision_mask = 3
+script = ExtResource( 2 )
+detector_min_length = 50
+detector_max_length = 1000
+
+[node name="Ahead" type="RayCast2D" parent="." index="2"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 30, 0 )
+collision_mask = 3
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="AheadLeft1" type="RayCast2D" parent="." index="3"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 30, -15 )
+collision_mask = 3
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="AheadRight1" type="RayCast2D" parent="." index="4"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 30, 15 )
+collision_mask = 3
+_sections_unfolded = [ "Z Index" ]
+
+[node name="AheadLeft2" type="RayCast2D" parent="." index="5"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 30, -30 )
+collision_mask = 3
+_sections_unfolded = [ "Z Index" ]
+
+[node name="AheadRight2" type="RayCast2D" parent="." index="6"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 30, 30 )
+collision_mask = 3
+_sections_unfolded = [ "Z Index" ]
+
+[node name="AheadLeft3" type="RayCast2D" parent="." index="7"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 15, -30 )
+collision_mask = 3
+_sections_unfolded = [ "Z Index" ]
+
+[node name="AheadRight3" type="RayCast2D" parent="." index="8"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 15, 30 )
+collision_mask = 3
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Left" type="RayCast2D" parent="." index="9"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, -30 )
+collision_mask = 3
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Right" type="RayCast2D" parent="." index="10"]
+
+z_as_relative = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 30 )
+collision_mask = 3
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Back" type="RayCast2D" parent="." index="11"]
+
+visible = false
+z_as_relative = false
+enabled = false
+exclude_parent = true
+cast_to = Vector2( -30, 0 )
+collision_mask = 3
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+

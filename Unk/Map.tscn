@@ -1,0 +1,127 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Map.gd" type="Script" id=1]
+[ext_resource path="res://Opponent.tscn" type="PackedScene" id=2]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=3]
+
+[node name="Map" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Outward" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.2
+_sections_unfolded = [ "Collision", "Z Index" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outward" index="0"]
+
+position = Vector2( -31.7461, -320.564 )
+scale = Vector2( 1.1946, 1.35714 )
+build_mode = 1
+polygon = PoolVector2Array( 38.8604, -5.8235, 488.311, -34.4917, 1002.9, -109.029, 1628.22, -160.632, 2025.56, 200.588, 2084.19, 521.673, 2286.11, 842.758, 2467.35, 1169.58, 2370.24, 1467.73, 2322.82, 1765.88, 1593.28, 1983.76, 1048.18, 1833.34, 637.809, 1466.38, 767.538, 1136.91, 644.322, 1368.91, 468.45, 1655.59, 58.0822, 1758.8, -417.424, 1581.06, -846.04, 990.488, -743.113, 543.262, -371.508, 257.925 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Inward" type="StaticBody2D" parent="." index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.2
+_sections_unfolded = [ "Collision", "Visibility", "Z Index" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inward" index="0"]
+
+position = Vector2( 1.36035, -1.36035 )
+build_mode = 1
+polygon = PoolVector2Array( 294.401, 120.733, 554.221, 147.82, 1019.96, 67.2588, 1501.08, 55.5075, 1850.5, 353.683, 1950.66, 658.127, 2084.23, 990.331, 2282.87, 1230.07, 2323.96, 1528.02, 2087.65, 1743.78, 1608.18, 1767.76, 1208.78, 1470.6, 1306.8, 1151.3, 1100.41, 712.425, 570.473, 860.392, 322.608, 1342.21, 10.4337, 1447.94, -269.012, 1244.02, -384.819, 906.675, -269.012, 524.01, 78.4071, 310.02 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Purple" parent="." index="2" instance=ExtResource( 2 )]
+
+modulate = Color( 1, 0, 1, 1 )
+position = Vector2( 929.318, -279.72 )
+collision_mask = 7
+rotate_speed = 6.0
+velocity_t = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="Purple" index="12"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Black" parent="." index="3" instance=ExtResource( 2 )]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 840.874, -130.24 )
+collision_mask = 7
+rotate_speed = 6.0
+velocity_t = 0.1
+
+[node name="Green" parent="." index="4" instance=ExtResource( 2 )]
+
+modulate = Color( 1, 1, 0, 1 )
+position = Vector2( 741.437, -0.603638 )
+collision_mask = 7
+rotate_speed = 6.0
+velocity_t = 0.1
+
+[node name="RoundStart" type="Area2D" parent="." index="5"]
+
+modulate = Color( 0, 1, 1, 1 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoundStart" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1019.01, -437.014, 1057.97, 53.0671, 1103.08, 46.9154, 1066.17, -443.165 )
+
+[node name="CanvasLayer" parent="." index="6" instance=ExtResource( 3 )]
+
+[connection signal="object_info" from="Purple" to="." method="_on_object_info"]
+
+[connection signal="object_info" from="Black" to="." method="_on_object_info"]
+
+[connection signal="object_info" from="Green" to="." method="_on_object_info"]
+
+[connection signal="body_exited" from="RoundStart" to="." method="_on_RoundStart_body_exited"]
+
+

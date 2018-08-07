@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Object.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30, 30 )
+
+[node name="Object" type="KinematicBody2D" index="0"]
+
+use_parent_material = true
+z_as_relative = false
+input_pickable = true
+collision_layer = 2
+collision_mask = 7
+collision/safe_margin = 0.001
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+max_speed = 200
+rotate_speed = 4.0
+mass = 5
+velocity_t = 0.08
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+z_as_relative = false
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[connection signal="mouse_entered" from="." to="." method="_on_Object_mouse_entered"]
+
+
