@@ -54,73 +54,42 @@ func _on_Connect_button_down():
 	input('id: ' + str(get_tree().get_network_unique_id()))
 	pass
 
-remote func remote_func(id):
-	input(str(id) + ' .. send .. remote_func()')
-	pass
 
-sync func sync_func(id):
-	input(str(id) + ' .. send .. sync_func()')
-	pass
-
-slave func slave_func(id):
-	input(str(id) + ' .. send .. slave_func()')
-	pass
-
-master func master_func(id):
-	input(str(id) + ' .. send .. master_func()')
-	pass
-
-func _on_Button_button_down():
-	remote_func(get_tree().get_network_unique_id())
-	pass
-
-func _on_Button2_button_down():
+func _on_Button1_button_down():
 	rpc('remote_func',get_tree().get_network_unique_id())
 	pass
 
-func _on_Button3_button_down():
+func _on_Button2_button_down():
 	var id = int(lineedit.text)
 	if not id: return
 	rpc_id(id,'remote_func',get_tree().get_network_unique_id())
 	pass
 
-func _on_Button4_button_down():
-	sync_func(get_tree().get_network_unique_id())
-	pass
-
-func _on_Button5_button_down():
+func _on_Button3_button_down():
 	rpc('sync_func',get_tree().get_network_unique_id())
 	pass
 
-func _on_Button6_button_down():
+func _on_Button4_button_down():
 	var id = int(lineedit.text)
 	if not id: return
 	rpc_id(id,'sync_func',get_tree().get_network_unique_id())
 	pass
 
-func _on_Button7_button_down():
-	slave_func(get_tree().get_network_unique_id())
-	pass
-
-func _on_Button8_button_down():
+func _on_Button5_button_down():
 	rpc('slave_func',get_tree().get_network_unique_id())
 	pass
 
-func _on_Button9_button_down():
+func _on_Button6_button_down():
 	var id = int(lineedit.text)
 	if not id: return
 	rpc_id(id,'slave_func',get_tree().get_network_unique_id())
 	pass
 
-func _on_Button10_button_down():
-	master_func(get_tree().get_network_unique_id())
-	pass
-
-func _on_Button11_button_down():
+func _on_Button7_button_down():
 	rpc('master_func',get_tree().get_network_unique_id())
 	pass
 
-func _on_Button12_button_down():
+func _on_Button8_button_down():
 	var id = int(lineedit.text)
 	if not id: return
 	rpc_id(id,'master_func',get_tree().get_network_unique_id())

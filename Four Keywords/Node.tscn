@@ -217,42 +217,16 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-columns = 3
+columns = 2
 _sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
 
-[node name="Button" type="Button" parent="HBoxContainer/GridContainer" index="0"]
+[node name="Button1" type="Button" parent="HBoxContainer/GridContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 167.0
-margin_bottom = 147.0
-rect_min_size = Vector2( 40, 30 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "normal call: remote"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect", "Size Flags" ]
-
-[node name="Button2" type="Button" parent="HBoxContainer/GridContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 171.0
-margin_right = 338.0
+margin_right = 253.0
 margin_bottom = 147.0
 rect_min_size = Vector2( 40, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -271,14 +245,14 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Button3" type="Button" parent="HBoxContainer/GridContainer" index="2"]
+[node name="Button2" type="Button" parent="HBoxContainer/GridContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 342.0
-margin_right = 509.0
+margin_left = 257.0
+margin_right = 510.0
 margin_bottom = 147.0
 rect_min_size = Vector2( 40, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -297,41 +271,14 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Button4" type="Button" parent="HBoxContainer/GridContainer" index="3"]
+[node name="Button3" type="Button" parent="HBoxContainer/GridContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 151.0
-margin_right = 167.0
-margin_bottom = 298.0
-rect_min_size = Vector2( 40, 30 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "normal call: sync"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect", "Size Flags" ]
-
-[node name="Button5" type="Button" parent="HBoxContainer/GridContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 171.0
-margin_top = 151.0
-margin_right = 338.0
+margin_right = 253.0
 margin_bottom = 298.0
 rect_min_size = Vector2( 40, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -350,15 +297,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Button6" type="Button" parent="HBoxContainer/GridContainer" index="5"]
+[node name="Button4" type="Button" parent="HBoxContainer/GridContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 342.0
+margin_left = 257.0
 margin_top = 151.0
-margin_right = 509.0
+margin_right = 510.0
 margin_bottom = 298.0
 rect_min_size = Vector2( 40, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -377,41 +324,14 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Button7" type="Button" parent="HBoxContainer/GridContainer" index="6"]
+[node name="Button5" type="Button" parent="HBoxContainer/GridContainer" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 302.0
-margin_right = 167.0
-margin_bottom = 449.0
-rect_min_size = Vector2( 40, 30 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "normal call: slave"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect", "Size Flags" ]
-
-[node name="Button8" type="Button" parent="HBoxContainer/GridContainer" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 171.0
-margin_top = 302.0
-margin_right = 338.0
+margin_right = 253.0
 margin_bottom = 449.0
 rect_min_size = Vector2( 40, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -430,15 +350,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Button9" type="Button" parent="HBoxContainer/GridContainer" index="8"]
+[node name="Button6" type="Button" parent="HBoxContainer/GridContainer" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 342.0
+margin_left = 257.0
 margin_top = 302.0
-margin_right = 509.0
+margin_right = 510.0
 margin_bottom = 449.0
 rect_min_size = Vector2( 40, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -457,41 +377,14 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Button10" type="Button" parent="HBoxContainer/GridContainer" index="9"]
+[node name="Button7" type="Button" parent="HBoxContainer/GridContainer" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 453.0
-margin_right = 167.0
-margin_bottom = 600.0
-rect_min_size = Vector2( 40, 30 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "normal call: master"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect", "Size Flags" ]
-
-[node name="Button11" type="Button" parent="HBoxContainer/GridContainer" index="10"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 171.0
-margin_top = 453.0
-margin_right = 338.0
+margin_right = 253.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 40, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -510,15 +403,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Button12" type="Button" parent="HBoxContainer/GridContainer" index="11"]
+[node name="Button8" type="Button" parent="HBoxContainer/GridContainer" index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 342.0
+margin_left = 257.0
 margin_top = 453.0
-margin_right = 509.0
+margin_right = 510.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 40, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -541,7 +434,7 @@ _sections_unfolded = [ "Rect", "Size Flags" ]
 
 [connection signal="button_down" from="HBoxContainer/VBoxContainer/HBoxContainer/Connect" to="." method="_on_Connect_button_down"]
 
-[connection signal="button_down" from="HBoxContainer/GridContainer/Button" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="HBoxContainer/GridContainer/Button1" to="." method="_on_Button1_button_down"]
 
 [connection signal="button_down" from="HBoxContainer/GridContainer/Button2" to="." method="_on_Button2_button_down"]
 
@@ -556,13 +449,5 @@ _sections_unfolded = [ "Rect", "Size Flags" ]
 [connection signal="button_down" from="HBoxContainer/GridContainer/Button7" to="." method="_on_Button7_button_down"]
 
 [connection signal="button_down" from="HBoxContainer/GridContainer/Button8" to="." method="_on_Button8_button_down"]
-
-[connection signal="button_down" from="HBoxContainer/GridContainer/Button9" to="." method="_on_Button9_button_down"]
-
-[connection signal="button_down" from="HBoxContainer/GridContainer/Button10" to="." method="_on_Button10_button_down"]
-
-[connection signal="button_down" from="HBoxContainer/GridContainer/Button11" to="." method="_on_Button11_button_down"]
-
-[connection signal="button_down" from="HBoxContainer/GridContainer/Button12" to="." method="_on_Button12_button_down"]
 
 
